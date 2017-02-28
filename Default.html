@@ -5,22 +5,7 @@
 	<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
 	<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">
 	<title>Hello World</title>
-	
-</head>
-<body>
-<form id="frmMain" onsubmit="try2()">
-		<label for="txtDepartAirport">Depart from: </label>
-		<input type="text" name="txtDepartAirport" id="txtDepartAirport" required="required"> &nbsp
-		<label for="txtArrivalAirport">Arrive to: </label>
-		<input type="text" name="txtArrivalAirport" id="txtArrivalAirport" required="required"><br /s>
-		<label for="txtDepart">Departure Date: </label>
-		<input type="text" name="txtDepart" id="txtDepart" required="required"> &nbsp
-		<label for="txtReturn">Return Date: </label>
-		<input type="text" name="txtReturn" id="txtReturn" required="required">
-	<input type="submit" value="submit">
-
-</form>
-<script>
+	<script>
 	document.getElementById("frmMain").addEventListener("submit", submitForm);
 
 		function submitForm(){
@@ -32,10 +17,22 @@
 				arrivalAirport + " has been booked";
 			alert(message);
 		}
-		function try2(){
-			alert("GTG");
-		}
 	</script>
+
+</head>
+<body>
+<form id="frmMain" onsubmit="submitForm()">
+		<label for="txtDepartAirport">Depart from: </label>
+		<input type="text" name="txtDepartAirport" id="txtDepartAirport" required="required"> &nbsp
+		<label for="txtArrivalAirport">Arrive to: </label>
+		<input type="text" name="txtArrivalAirport" id="txtArrivalAirport" required="required"><br /s>
+		<label for="txtDepart">Departure Date: </label>
+		<input type="text" name="txtDepart" id="txtDepart" required="required"> &nbsp
+		<label for="txtReturn">Return Date: </label>
+		<input type="text" name="txtReturn" id="txtReturn" required="required">
+	<input type="submit" value="submit">
+
+</form>
 <script>
 	$("#txtDepart").datepicker();
 	$("#txtReturn").datepicker();
